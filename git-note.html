@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+    <ul>
+      <li class="text-primary">初始化git仓库：<kbd>git init</kbd></li>
+      <li class="text-primary">把文件修改提交到暂存区：<kbd>git add [file-name]|[-A]|[--all]</kbd></li>
+      <li class="text-primary">把暂存区内容提交到当前分支：<kbd>git commit [-m] ["msg"]</kbd></li>
+      <li class="text-primary">查看仓库状态：<kbd>git status</kbd></li>
+      <li class="text-primary">查看跟踪文件的改变情况（相比于上次commit）<kbd>git diff
+[file-name]</kbd></li>
+      <li class="text-primary">查看历史提交：<kbd>git log</kbd></li>
+      <li class="text-primary">退回到历史版本：<kbd>git reset --hard [版本号|HEAD^(上一个)|HEAD^^(上上个)|HEAD~100(上100个)]</kbd>
+        <ul>
+          <li class="text-warning">当版本回退后，不能再通过<code>git log</code>查询到“未来的版本”了</li>
+          <li class="text-warning">但你可以通过<code>git reset --hard [版本号]</code>"回到未来"版本。</li>
+          <li class="text-warning">使用<kbd>git reflog</kbd>可以查询到你的“未来”版本号</li>
+        </ul>
+      <li class="text-muted">如果你在add命令后又对文件进行了修改，那么commit的内容只是你add命令之前的内容</li>
+      <li class="text-primary">使用<kbd>git checkout -- [filename]</kbd>可以使文件回到上一次add或commit状态</li>
+      <li class="text-primary">使用<kbd>git reset HEAD [file-name]</kbd>可以把暂存区的修改撤销，重新放回工作区</li>
+      <li class="text-muted">所以如果你把不想被看到的修改从暂存区抹杀掉，可以<code>git reset HEAD [file-name]</code>再<code>git checkout -- [filename]</code>即可</li>
+      <li class="text-primary">当你删除了一个文件，你可以使用<kbd>git rm [file-name]</kbd>把它从版本库彻底删除：如果你只是误删，可以使用<code>git checkout -- [filename]</code>恢复。</li>
+      <li class="text-primary">增加远程仓库：<kbd>git remote add [URL]</kbd></li>
+      <li class="text-primary">推送到远程仓库：<kbd>git push [remote-name] [local-branch]:[remote-branch]</kbd></li>
+      <li class="text-primary">将远程库克隆到本地新目录：<kbd>git clone [url]</kbd></li>
+      <li class="text-primary">分支管理：
+        <ul>
+          <li class="text-warning">创建分支：<kbd>git branch [branch-name]</kbd></li>
+          <li class="text-warning">删除分支：<kbd>git branch -d [branch-name]</kbd></li>
+          <li class="text-warning">切换分支：<kbd>git checkout [branch-name]</kbd></li>
+          <li class="text-warning">创建并切换分支：<kbd>git checkout -b [branch-name]</kbd></li>
+          <li class="text-warning">查看当前分支：<kbd>git branch</kbd></li>
+          <li class="text-warning">合并到当前分支：<kbd>git merge [branch-name]</kbd></li>
+        </ul>
+      </li>
+      <li class="text-muted">解决冲突：合并出冲突就手动解决吧，没什么好说的</li>
+      <li class="text-muted">把分支a合并到分支b上后，分支a的指针不变，b的指针指向二者融合的新指针的位置</li>
+      
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
